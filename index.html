@@ -28,26 +28,31 @@
     <!-- Load our Axios and our component. -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer type="text/babel">
-    const user = {
-      firstName: 'Peter',
-      lastName: 'Parker'
-    }
-    const style = {
-      fontFamily: 'Arial',
-      color: 'green'
-    }
-    function formatName(user){
-      return user.firstName + '' + userlastName
-    }
-    const element ={
-      <h1 style = {style}>
-        Hello,{formatName(user)}</h1>
-    }
-  
+
+      const user = {
+        firstName: 'Peter',
+        lastName: 'Parker'
+      }
+
+      const style = {
+        fontFamily: 'Arial',
+        color: 'green'
+      }
+
+      function formatName(user){
+        return user.firstName + '' + userlastName;
+      }
+
+      const element = (
+        <h1 style = {style}>
+          Hello,{formatName(user)}
+        </h1>
+      )
+    
       ReactDOM.render (
-        <h1></h1>,
+        element,
           document.getElementById ('root')
       )
-
+  </script>
   </body>
 </html>
